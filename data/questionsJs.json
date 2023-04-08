@@ -1,0 +1,59 @@
+[
+    {
+        "title_en": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        "title_ar": "ما الصيغة الصحيحة للإشارة إلى برنامج نصي خارجي يسمى 'xxx.js'؟",
+
+        "choice1_en": "<script href='xxx.js'>",
+        "choice1_ar": "اختيار خطا",
+
+        "choice2_en": "<script name='xxx.js'>",
+        "choice2_ar": "اختيار خطا",
+
+        "choice3_en": "<script src='xxx.js'>",
+        "choice3_ar": "اختيار خطا",
+
+        "choice4_en": "<script file='xxx.js'>",
+        "choice4_ar": "الاجابه",
+
+        "answer_en": "<script src='xxx.js'>",
+        "answer_ar": "الاجابه"
+    },
+    {
+        "title_en": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        "title_ar": "ما الصيغة الصحيحة للإشارة إلى برنامج نصي خارجي يسمى 'xxx.js'؟",
+
+        "choice1_en": "<script href='xxx.js'>",
+        "choice1_ar": "الاجابه",
+
+        "choice2_en": "<script name='xxx.js'>",
+        "choice2_ar": "اختيار خطا",
+
+        "choice3_en": "<script src='xxx.js'>",
+        "choice3_ar": "اختيار خطا",
+
+        "choice4_en": "<script file='xxx.js'>",
+        "choice4_ar":  "اختيار خطا",
+
+        "answer_en": "<script src='xxx.js'>",
+        "answer_ar": "الاجابه"
+    },
+    {
+        "title_en": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        "title_ar": "ما الصيغة الصحيحة للإشارة إلى برنامج نصي خارجي يسمى 'xxx.js'؟",
+
+        "choice1_en": "<script href='xxx.js'>",
+        "choice1_ar": "اختيار خطا",
+
+        "choice2_en": "<script name='xxx.js'>",
+        "choice2_ar": "الاجابه",
+
+        "choice3_en": "<script src='xxx.js'>",
+        "choice3_ar": "اختيار خطا",
+
+        "choice4_en": "<script file='xxx.js'>",
+        "choice4_ar": "اختيار خطا",
+
+        "answer_en": "<script src='xxx.js'>",
+        "answer_ar": "الاجابه"
+    }
+]

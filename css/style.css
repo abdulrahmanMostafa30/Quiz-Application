@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Start Navbar */
+.navbar {
+    background-image: linear-gradient(to right, rgb(241, 241, 241));
+    padding: 0 !important;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(40, 80, 115) !important;
+}
+
+/* End Navbar */
+/* Start Slider */
+.banner {
+    background-image: linear-gradient(to right, rgb(241, 241, 241));
+    color: #22243b;
+    padding-top: 5%;
+}
+
+.promo-title {
+    color: #22243b;
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+/*  --- About --- */
+.team {
+    margin-bottom: 5%;
+}
+
+.team-title h2 {
+    color: #22243b;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.team-title p {
+    color: #22243b;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.team .member {
+    position: relative;
+    padding: 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background: #fff;
+}
+
+.team .member .teamPic {
+    overflow: hidden;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.team .member .member-info {
+    padding-left: 30px;
+}
+
+.team .member h4 {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #e2482b;
+}
+
+.team .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+}
+
+.team .member span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+}
+
+.team .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
+
+.team .member .social {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.team .member .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5px; */
+    width: 30px;
+    height: 30px;
+    background: #eff2f8;
+    text-decoration: none;
+}
+
+.team .member .social a i {
+    color: #e2482b;
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.team .member .social a i:hover {
+    color: white;
+}
+
+.team .member .social a:hover {
+    background-color: #e2482b;
+}
+
+/*  --- Footer --- */
+/* Color 
+    rgb(241,241,241)
+    rgb(225, 70, 74) */

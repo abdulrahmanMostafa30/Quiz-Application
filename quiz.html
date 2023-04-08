@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/quiz.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <select class="p-1 mt-2" id="languageList">
+            <option value="en" data-i18n="english" selected>English</option>
+            <option value="ar" data-i18n="arabic">Arabic</option>
+        </select>
+    </div>
+    <div class="container">
+        <div class="quiz-app">
+            <button id="darkBtn">Dark Mode</button>
+            <div class="quiz-info">
+                <div class="category">
+                    <span data-i18n="category">Catogary</span>: <span id="categoryName"></span>
+                </div>
+                <div class="count">
+                    <span data-i18n="question_count"></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="quiz-area"></div>
+            <div class="answers-area">
+            </div>
+            <button class="submit" data-i18n="submit">Submit Answers</button>
+            <div class="bullets">
+                <div class="spans">
+                </div>
+                <div class="countdown">
+                </div>
+            </div>
+            <div class="results">
+            </div>
+        </div>
+    </div>
+
+   <!-- JavaScript Libraries -->
+   <script src="lib/jquery/jquery-3.6.4.min.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+
+   <script src="js/quiz.js"></script>
+   <script type="module" src="js/multilingual.js"></script>
+
+</body>
+
+</html>
