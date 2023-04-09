@@ -11,48 +11,54 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script type="module" src="js/multilingual.js"></script>
+
 </head>
 
 <body>
 
+   <!-- Start Nav -->
+   <nav class="navbar navbar-expand-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html" data-i18n="quizes">Quizes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" data-i18n="about">About</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn btn-outline-dark" href="login.html" role="button"
+                    style="margin: 5%; padding: 7px 30px;" data-i18n="login">LogIn</a>
+                <a class="btn btn-outline-dark" href="signup.html" role="button"
+                    style="margin: 5%; padding: 7px 30px;" data-i18n="signup">SignUp</a>
 
-    <!-- Start Nav -->
-    <nav class="navbar navbar-expand-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Quizes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <a class="btn btn-outline-dark" href="login.html" role="button"
-                        style="margin: 5%; padding: 7px 30px;">LogIn</a>
-                    <a class="btn btn-outline-dark" href="signup.html" role="button"
-                        style="margin: 5%; padding: 7px 30px;">SignUp</a>
-
-                </form>
-            </div>
+            </form>
         </div>
-    </nav>
-    <!--  End Nav  -->
+    </div>
+</nav>
+<!--  End Nav  -->
+<div class="container">
+    <select class="p-1 mt-2" id="languageList">
+        <option value="en" data-i18n="english" selected>English</option>
+        <option value="ar" data-i18n="arabic">Arabic</option>
+    </select>
+</div>
+
     <!-- Start About -->
     <div class="team">
         <div class="container">
             <div class="team-title text-center">
-                <h2> Our Team </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nostrum aut
-                    delectus beatae quo reiciendis asperiores dicta quidem, minima sunt dolore
-                    reprehenderit earum labore rem, corporis consectetur tenetur aliquam harum!</p>
+                <h2 data-i18n="OurTeam"></h2>
+                <p data-i18n="getLorem"></p>
             </div>
             <div class="row">
                 <!-- Team member 1 -->
@@ -62,12 +68,9 @@
                             <img src="images/lol.png" alt="Lamiaa Selim" class="img-fluid">
                         </div>
                         <div class="member-info">
-                            <h4>Lamiaa Selim</h4>
+                            <h4 data-i18n="LamiaaSelim"></h4>
                             <span>Full Stack MEARN</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Voluptates voluptatem ea nulla asperiores rerum soluta totam nemo
-                                accusamus quod, quidem sunt laborum magni unde autem id,
-                                hic minimamagnam esse?</p>
+                            <p data-i18n="getLorem"></p>
                         </div>
                         <div class="social">
                             <a href="#"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
@@ -84,12 +87,10 @@
                             <img src="images/lol.png" alt="Lamiaa Selim" class="img-fluid">
                         </div>
                         <div class="member-info">
-                            <h4>Lamiaa Selim</h4>
+                            <h4 data-i18n="KholoudMohamed"></h4>
                             <span>Full Stack MEARN</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Voluptates voluptatem ea nulla asperiores rerum soluta totam nemo
-                                accusamus quod, quidem sunt laborum magni unde autem id,
-                                hic minimamagnam esse?</p>
+                            <p data-i18n="getLorem"></p>
+
                         </div>
                         <div class="social">
                             <a href="#"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
@@ -103,15 +104,13 @@
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
                         <div class="teamPic">
-                            <img src="images/lol.png" alt="Lamiaa Selim" class="img-fluid">
+                            <img src="images/man.png" alt="" class="img-fluid">
                         </div>
                         <div class="member-info">
-                            <h4>Lamiaa Selim</h4>
+                            <h4 data-i18n="AbdulrahmanMostafa"></h4>
                             <span>Full Stack MEARN</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Voluptates voluptatem ea nulla asperiores rerum soluta totam nemo
-                                accusamus quod, quidem sunt laborum magni unde autem id,
-                                hic minimamagnam esse?</p>
+                            <p data-i18n="getLorem"></p>
+
                         </div>
                         <div class="social">
                             <a href="#"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
@@ -125,15 +124,12 @@
                 <div class="col-lg-6 mt-4">
                     <div class="member d-flex align-items-start">
                         <div class="teamPic">
-                            <img src="images/lol.png" alt="Lamiaa Selim" class="img-fluid">
+                            <img src="images/man.png" alt="" class="img-fluid">
                         </div>
                         <div class="member-info">
-                            <h4>Lamiaa Selim</h4>
+                            <h4 data-i18n="TareqSafwat"></h4>
                             <span>Full Stack MEARN</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Voluptates voluptatem ea nulla asperiores rerum soluta totam nemo
-                                accusamus quod, quidem sunt laborum magni unde autem id,
-                                hic minimamagnam esse?</p>
+                            <p data-i18n="getLorem"></p>
                         </div>
                         <div class="social">
                             <a href="#"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>

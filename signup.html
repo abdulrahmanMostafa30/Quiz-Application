@@ -6,42 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-  
-<!-- Start Nav -->
-<nav class="navbar navbar-expand-sm">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav"> 
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard.html">Quizes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-            </li>
-        </ul>
-        <form class="d-flex">
-            <a class="btn btn-outline-dark" href="login.html" role="button" style="margin: 5%; padding: 7px 30px;">LogIn</a>
-            <a class="btn btn-outline-dark" href="signup.html" role="button" style="margin: 5%; padding: 7px 30px;">SignUp</a>
- 
-        </form>
+    <!-- Start Nav -->
+    <nav class="navbar navbar-expand-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html" data-i18n="quizes">Quizes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-i18n="about">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="btn btn-outline-dark" href="login.html" role="button"
+                        style="margin: 5%; padding: 7px 30px;" data-i18n="login">LogIn</a>
+                    <a class="btn btn-outline-dark" href="signup.html" role="button"
+                        style="margin: 5%; padding: 7px 30px;" data-i18n="signup">SignUp</a>
+
+                </form>
+            </div>
         </div>
-    </div>
     </nav>
-<!--  End Nav  -->
+    <!--  End Nav  -->
+    <div class="container">
+        <select class="p-1 mt-2" id="languageList">
+            <option value="en" data-i18n="english" selected>English</option>
+            <option value="ar" data-i18n="arabic">Arabic</option>
+        </select>
+    </div>
     <section class="Login">
         <div class="container mt-5 ">
             <div class="row justify-content-center">
@@ -51,35 +59,35 @@
                         <div class="card-body">
                             <div id="form-register">
                                 <div class="form-group ">
-                                    <label for="email" class="control-label">E-Mail Address</label>
+                                    <label for="email" class="control-label" data-i18n="pMail"></label>
                                     <input id="email" type="email" class="form-control email-input" name="email">
                                     <div class="error"></div>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="name" class="control-label">Name</label>
+                                    <label for="name" class="control-label" data-i18n="pname"></label>
                                     <input id="name" type="text" class="form-control full-name-input" name="name"
                                         value="">
                                     <div class="error"></div>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="password" class="control-label">Password</label>
+                                    <label for="password" class="control-label" data-i18n="p1Password"></label>
                                     <input id="password" type="password" class="form-control password-input"
                                         autocomplete="off" name="password">
                                     <div class="error"></div>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="password-confirm" class="control-label">Confirm Password</label>
+                                    <label for="password-confirm" class="control-label" data-i18n="confirmPassword"></label>
                                     <input id="password-confirm" type="password"
                                         class="form-control conf-password-input" autocomplete="off"
                                         name="password_confirmation">
                                     <div class="error"></div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="btn btn-outline-dark" type="submit" value="Register" style="padding: 7px 30px;">
+                                    <button class="btn btn-outline-dark" style="padding: 7px 30px;" data-i18n="register"></button>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <span>Already have an account? <a class="ms-1 regster-href" href="login.html">Login</a>
+                                <span><span data-i18n="AhaveAccount"> </span><a class="ms-1 regster-href" href="login.html" data-i18n="login"></a>
                                 </span>
                             </div>
                         </div>
@@ -94,6 +102,8 @@
     <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery-3.6.4.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="module" src="js/multilingual.js"></script>
+
 
 </body>
 

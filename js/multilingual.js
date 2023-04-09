@@ -3,8 +3,8 @@ import translations from "../js/translations.js";
 const languageSelector = document.querySelector("select");
 languageSelector.addEventListener("change", (event) => {
   localStorage.setItem("lang", event.target.value);
-  location.reload();
-  // setLanguage(event.target.value);
+  // location.reload();
+  setLanguage(event.target.value);
 
   
 });

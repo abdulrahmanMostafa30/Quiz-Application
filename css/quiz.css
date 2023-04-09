@@ -14,7 +14,6 @@ body {
     padding: 15px;
 }
 
-/* .quiz-app*/
 .quiz-info {
     display: flex;
     background-color: #fff;
@@ -30,7 +29,6 @@ body {
     text-align: right;
 }
 
-/* .quiz-app */
 .quiz-area {
     background-color: #fff;
     padding: 20px;
@@ -41,13 +39,11 @@ body {
     margin: 0;
 }
 
-/* .quiz-app*/
 .answers-area {
     background-color: #fff;
     padding: 0 20px 20px;
 }
 
-/* .quiz-app .answers-area*/
 .answer {
     background-color: #f9f9f9;
     color: #777;
@@ -87,10 +83,8 @@ body {
 
 .quiz-app .submit:focus {
     outline: none;
-    /* background-color: #07a8a8; */
 }
 
-/*.quiz-app*/
 .bullets {
     border-top: 1px solid #dfdfdf;
     background-color: #fff;
@@ -109,8 +103,6 @@ body {
     background-color: #ddd;
     margin-right: 5px;
     border-radius: 50%;
-    /* text-align: center;
-font-size: 13px; */
 }
 
 .quiz-app .bullets .spans span.on {
@@ -142,22 +134,16 @@ font-size: 13px; */
 }
 
 #darkBtn {
-    /* background-color: #2a2b2c; */
     display: block;
     width: 15%;
     padding: 7px;
     border: none;
-    /* color: #fff; */
     font-size: 13px;
     cursor: pointer;
     border-radius: 6px;
     margin: 10px;
 }
 
-/* #darkBtn:active{
-    background-color: #fff;
-color: #2a2b2c;
-} */
 .darkModeDarker {
     background-color: #2a2b2c;
     color: #dfdcdc;

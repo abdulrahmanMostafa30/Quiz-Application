@@ -6,67 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-  
-<!-- Start Nav -->
-<nav class="navbar navbar-expand-sm">
+
+   <!-- Start Nav -->
+   <nav class="navbar navbar-expand-sm">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav"> 
+            <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard.html">Quizes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-            </li>
-        </ul>
-        <form class="d-flex">
-            <a class="btn btn-outline-dark" href="login.html" role="button" style="margin: 5%; padding: 7px 30px;">LogIn</a>
-            <a class="btn btn-outline-dark" href="signup.html" role="button" style="margin: 5%; padding: 7px 30px;">SignUp</a>
- 
-        </form>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html" data-i18n="quizes"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" data-i18n="about"></a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn btn-outline-dark" href="login.html" role="button"
+                    style="margin: 5%; padding: 7px 30px;" data-i18n="login"></a>
+                <a class="btn btn-outline-dark" href="signup.html" role="button"
+                    style="margin: 5%; padding: 7px 30px;" data-i18n="signup"></a>
+
+            </form>
         </div>
     </div>
-    </nav>
+</nav>
 <!--  End Nav  -->
+<div class="container">
+    <select class="p-1 mt-2" id="languageList">
+        <option value="en" data-i18n="english" selected>English</option>
+        <option value="ar" data-i18n="arabic">Arabic</option>
+    </select>
+</div>
+
     <section class="Login">
         <div class="container mt-5 ">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8 col-sm-10">
                     <div class="card mb-5">
-                        <div class="login-card-header mt-3">Log In to Your Account! </div>
+                        <div class="login-card-header mt-3" data-i18n="plogin"></div>
                         <div class="card-body">
                             <form id="form-register" role="form" method="" action="">
                                 <div class="form-group ">
-                                    <label for="email" class="control-label">E-Mail Address</label>
+                                    <label for="email" class="control-label" data-i18n="pMail"></label>
                                     <input id="email" type="email" class="form-control" name="email">
                                     <div class="check"> </div>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="password" class="control-label">Password</label>
+                                    <label for="password" class="control-label" data-i18n="p1Password"></label>
                                     <input id="password" type="password" class="form-control" autocomplete="off"
                                         name="password">
                                     <div class="check"> </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="btn btn-outline-dark" type="submit" value="Login" style="padding: 7px 30px;">
+                                    <button class="btn btn-outline-dark" style="padding: 7px 30px;" data-i18n="login"></button>
                                 </div>
                             </form>
                             <div class="mt-4">
-                                <span>Don't have an account?  <a class="ms-1 regster-href" href="signup.html">SignUp</a>
+                                <span><span data-i18n="p1DontPassword"> </span><a class="ms-1 regster-href" href="signup.html" data-i18n="signup"></a>
                                 </span>
                             </div>
                
@@ -82,6 +92,8 @@
     <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery-3.6.4.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="module" src="js/multilingual.js"></script>
+
 
 </body>
 

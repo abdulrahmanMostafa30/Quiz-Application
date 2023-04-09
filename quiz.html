@@ -6,48 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/quiz.css" rel="stylesheet">
 </head>
+
 <body>
 
-  
-<!-- Start Nav -->
-<nav class="navbar navbar-expand-sm">
+   <!-- Start Nav -->
+   <nav class="navbar navbar-expand-sm">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav"> 
+            <img src="images/logo2.png" alt="Avatar Logo" style="width:150px;" class="img-nav">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard.html">Quizes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-            </li>
-        </ul>
-        <form class="d-flex">
-            <a class="btn btn-outline-dark" href="login.html" role="button" style="margin: 5%; padding: 7px 30px;">LogIn</a>
-            <a class="btn btn-outline-dark" href="signup.html" role="button" style="margin: 5%; padding: 7px 30px;">SignUp</a>
- 
-        </form>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html" data-i18n="quizes">Quizes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" data-i18n="about">About</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn btn-outline-dark" href="login.html" role="button"
+                    style="margin: 5%; padding: 7px 30px;" data-i18n="login">LogIn</a>
+                <a class="btn btn-outline-dark" href="signup.html" role="button"
+                    style="margin: 5%; padding: 7px 30px;" data-i18n="signup">SignUp</a>
+
+            </form>
         </div>
     </div>
-    </nav>
+</nav>
 <!--  End Nav  -->
-    <div class="container">
-        <select class="p-1 mt-2" id="languageList">
-            <option value="en" data-i18n="english" selected>English</option>
-            <option value="ar" data-i18n="arabic">Arabic</option>
-        </select>
-    </div>
+<div class="container">
+    <select class="p-1 mt-2" id="languageList">
+        <option value="en" data-i18n="english" selected>English</option>
+        <option value="ar" data-i18n="arabic">Arabic</option>
+    </select>
+</div>
+
     <div class="container">
         <div class="quiz-app">
             <button id="darkBtn">Dark Mode</button>
@@ -75,12 +78,12 @@
         </div>
     </div>
 
-   <!-- JavaScript Libraries -->
-   <script src="lib/jquery/jquery-3.6.4.min.js"></script>
-   <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery-3.6.4.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
 
-   <script src="js/quiz.js"></script>
-   <script type="module" src="js/multilingual.js"></script>
+    <script src="js/quiz.js"></script>
+    <script type="module" src="js/multilingual.js"></script>
 
 </body>
 
