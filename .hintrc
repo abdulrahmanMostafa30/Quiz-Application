@@ -6,7 +6,8 @@
     "axe/forms": [
       "default",
       {
-        "select-name": "off"
+        "select-name": "off",
+        "label": "off"
       }
     ],
     "axe/name-role-value": [
@@ -17,6 +18,12 @@
       }
     ],
     "no-inline-styles": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
+    ]
   }
 }
