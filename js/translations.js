@@ -15,7 +15,7 @@ var translations = {
     p1Home: 'Hey! would you link to grow up your skill and if you are interested to do just start here.',
     hello : 'Hello',
     wellcomeDashboard: 'Test Your Skills With These Quizzes.',
-    theQuiz: 'The Quiz',
+    theQuiz: 'The Quizzes',
     getLorem: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatem ea nulla asperiores rerum soluta totam nemo accusamus quod, quidem sunt laborum magni unde autem id, hic minimamagnam esse?',
     Goodluck: 'Good luck !',
     p2Quizzes: '10 Questions covering the basics of',

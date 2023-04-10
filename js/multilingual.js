@@ -27,6 +27,7 @@ var setLanguage = (language) => {
   });
   document.dir = language === "ar" ? "rtl" : "ltr";
 };
+
 Object.keys(localStorage).forEach(function (key) {
   if (key != 'lang' || key != 'theme') {
     try {
@@ -37,12 +38,11 @@ Object.keys(localStorage).forEach(function (key) {
         document.getElementById('LogInNav').setAttribute('data-i18n', 'logout')
         document.getElementById('LogInNav').href = "#";
         loginDone = true
-        if (window.location.pathname.indexOf('index.html')) {
+        if (window.location.pathname.includes('index.html')) {
           document.getElementById('SignUpHome').setAttribute('data-i18n', 'quizes')
           document.getElementById('SignUpHome').href = 'dashboard.html'
         }
-        if (window.location.pathname.indexOf('dashboard.html')) {
-          alert('dashboard')
+        if (window.location.pathname.includes('dashboard.html')) {
           document.getElementById('uName').textContent = userFromLocalStorage.name
         }
         return
@@ -53,12 +53,14 @@ Object.keys(localStorage).forEach(function (key) {
   }
 });
 if (!loginDone) {
-  if (window.location.pathname.indexOf('dashboard.html')) {
-    document.getElementById('uName').setAttribute('data-i18n', 'anonymous')
+  try {
+    if (window.location.pathname == '/dashboard.html') {
+      document.getElementById('uName').setAttribute('data-i18n', 'anonymous')
+    }
+  }
+  catch {
   }
 }
-
-
 
 
 $(window).on('load', function () {
