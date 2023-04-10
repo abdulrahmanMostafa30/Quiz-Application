@@ -1,4 +1,6 @@
 // Signup function
+
+
 function login() {
     event.preventDefault()
     var username = document.getElementById("email").value; 

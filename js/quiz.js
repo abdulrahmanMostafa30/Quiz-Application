@@ -108,7 +108,7 @@ function getQuestions() {
             // Adding Data
             addQuestionsData(myQuestions[currentIndex], qCount);
             // Start countDown 
-            countDown(500, qCount)
+            countDown(5, qCount)
 
             // click on submit
             sumbitButton.onclick = function () {
