@@ -36,26 +36,28 @@ function themeToggle(theme) {
             answersQ[i].classList.remove("darkModeDarker")
         }
     }
-    if(theme == 'dark'){
+    if (theme == 'dark') {
         $(document.body).addClass("darkModeLighter");
         $(".quiz-app").addClass("darkModeDarker");
-    
         $(".answers-area").addClass("darkModeLighter");
         $(".quiz-info").addClass("darkModeLighter");
         $(".quiz-area").addClass("darkModeLighter");
         $(".bullets").addClass("darkModeLighter");
+        $(".mybtn").addClass("btn-outline-light");
+        $(".mybtn").removeClass("btn-outline-dark");
         $("#darkBtn").text('Light Mode')
         $("#darkBtn").removeClass("darkModeDarker");
 
     }
-    else{
+    else {
         $(document.body).removeClass("darkModeLighter");
         $(".quiz-app").removeClass("darkModeDarker");
         $(".answers-area").removeClass("darkModeLighter");
         $(".quiz-info").removeClass("darkModeLighter");
         $(".quiz-area").removeClass("darkModeLighter");
         $(".bullets").removeClass("darkModeLighter");
-
+        $(".mybtn").removeClass("btn-outline-light");
+        $(".mybtn").addClass("btn-outline-dark");
         $("#darkBtn").text('Dark Mode')
         $("#darkBtn").addClass("darkModeDarker");
     }
@@ -63,31 +65,35 @@ function themeToggle(theme) {
 
 }
 
-if(category=='js')
-{   
-    if(language=='en'){
+if (category == 'js') {
+    if (language == 'en') {
         categoryName = 'JS'
     }
-    else if(language=='ar'){
+    else if (language == 'ar') {
         categoryName = 'جافا اسكريبت'
     }
-    
+
     categoryFile = 'data/questionsJs.json'
 }
-else if(category=='html'){
+else if (category == 'html') {
     categoryFile = 'data/questionsHtml.json'
 }
-else{
+else if (category == 'css') {
+    categoryFile = 'data/questionsCss.json'
+}
+else if (category == 'jQuery') {
+    categoryFile = 'data/questionsjQuery.json'
+}
+else {
     window.location.href = 'dashboard.html'
 }
 document.querySelector("#categoryName").textContent = categoryName
-const numLatinToAr=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]).replace(/\./g, "٫");
+const numLatinToAr = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]).replace(/\./g, "٫");
 
 //settings options
 let currentIndex = 0;
 let rAnswers = 0;
 let countDownInterval;
-
 function getQuestions() {
     let myRepuest = new XMLHttpRequest();
     myRepuest.onreadystatechange = function () {
@@ -101,13 +107,12 @@ function getQuestions() {
 
             // Adding Data
             addQuestionsData(myQuestions[currentIndex], qCount);
-
             // Start countDown 
             countDown(500, qCount)
 
             // click on submit
             sumbitButton.onclick = function () {
-                
+                countQ = Object.keys(myQuestions[currentIndex]).length / 2 - 2
                 let answer;
                 if (language == 'en') {
                     answer = myQuestions[currentIndex]['answer_en']
@@ -120,7 +125,6 @@ function getQuestions() {
                 cheackAnswer(answer, qCount)
                 qArea.innerHTML = ''
                 answersArea.innerHTML = ''
-
                 // Adding Data
                 addQuestionsData(myQuestions[currentIndex], qCount);
 
@@ -254,7 +258,7 @@ function showResults(count) {
                 theResults = `<span class="good"> Good you pass </span>, ${rAnswers} 
                 from ${count}`;
             }
-            else{
+            else {
                 theResults = `<span class="good"> احسنت , لقدت قمت بحل  </span>, ${rAnswers} 
                 من ${count}`;
             }
@@ -264,7 +268,7 @@ function showResults(count) {
                 theResults = `<span class="prefect"> Excellent </span>, 
                 All Answers is right`;
             }
-            else{
+            else {
                 theResults = `<span class="prefect"> أنت بلا شك الافضل </span>, 
                 جميع الاسئلة صحصيحه`;
             }
@@ -273,7 +277,7 @@ function showResults(count) {
                 theResults = `<span class="bad"> Sorry you fail </span>, ${rAnswers} 
                 from ${count}`;
             }
-            else{
+            else {
                 theResults = `<span class="bad"> حاول مره اخري </span>, ${numLatinToAr(rAnswers)} 
                 من ${numLatinToAr(count)}`;
             }

@@ -11,6 +11,13 @@
       crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
+   <style>
+      @media screen and (min-width:992px) {
+         .col-lg-3 {
+            width: 23% !important;
+         }
+      }
+   </style>
 </head>
 
 <body>
@@ -48,19 +55,19 @@
          <option value="en" data-i18n="english" selected>English</option>
          <option value="ar" data-i18n="arabic">Arabic</option>
       </select>
-      <!-- <button id="darkBtn">Dark Mode</button> -->
    </div>
 
 
    <main>
       <div class="container-fliud">
          <div class="container mt-3 ">
-            <p class="h5 f-2 fw-bold"><span data-i18n="hello">Hello</span> <span id="uName" class="uName"></span> <span data-i18n="wellcomeDashboard"></span></p>
+            <p class="h5 f-2 fw-bold"><span data-i18n="hello">Hello</span> <span id="uName" class="uName"></span> <span
+                  data-i18n="wellcomeDashboard"></span></p>
             <hr>
             <div class="row justify-content-start p-0">
                <div class="col-12 d-sm-block d-md-none col-md-4">
                   <div class="text-center">
-                     <img src="images/h-logo.png" alt="" class="img-fluid" width="250px">
+                     <img src="images/dashboard.png" alt="" class="img-fluid" width="250px">
                   </div>
                </div>
 
@@ -71,7 +78,7 @@
 
                <div class="col-12 col-md-4 d-none d-md-block">
                   <div class="text-center">
-                     <img src="images/h-logo.png" alt="" class="img-fluid" width="250px">
+                     <img src="images/dashboard.png" alt="" class="img-fluid" width="250px">
                   </div>
                </div>
             </div>
@@ -79,11 +86,37 @@
 
          <div class="container mt-5">
             <div class="row justify-content-start p-0">
+               <!--HTML Quiz-->
+               <div class="col-12 col-md-6 col-lg-3 mb-4">
+                  <div class="card p-0">
+                     <img src="images/icons8-html-5.svg">
+                     <div class="card-body">
+                        <h5 class="card-title">HTML</h5>
+                        <p class="card-text"><span data-i18n="p2Quizzes"></span> HTML</p>
+                        <p class="card-text" data-i18n="Goodluck"><i class="fa fa-smile-o" aria-hidden="true"></i></p>
+                        <a href="quiz.html?category=html" class="btn btn-outline-danger" data-i18n="startQuiz"></a>
+                     </div>
+                  </div>
+               </div>
+               <!--END HTML-->
+               <!--CSS Quiz-->
+               <div class="col-12 col-md-6 col-lg-3 mb-4">
+                  <div class="card p-0">
+                     <img src="images/icons8-css3.svg">
+                     <div class="card-body">
+                        <h5 class="card-title">CSS</h5>
+                        <p class="card-text"><span data-i18n="p2Quizzes"></span> CSS</p>
+                        <p class="card-text" data-i18n="Goodluck"><i class="fa fa-smile-o" aria-hidden="true"></i></p>
+                        <a href="quiz.html?category=css" class="btn btn-outline-danger" data-i18n="startQuiz"></a>
+                     </div>
+                  </div>
+               </div>
+               <!--END CSS-->
                <!--JS Quiz-->
                <div class="col-12 col-md-6 col-lg-3 mb-4">
                   <div class="card p-0">
-                     <!-- <div class="card" style="background-color: #FEFEFE;"></div> -->
-                     <img src="images/js2.png" class="card-img-top" alt="">
+                     <img src="images/icons8-javascript (2).svg">
+
                      <div class="card-body">
                         <h5 class="card-title">JS</h5>
                         <p class="card-text"><span data-i18n="p2Quizzes"></span> JS</p>
@@ -93,45 +126,19 @@
                   </div>
                </div>
                <!--END JS-->
-               <!--JS Quiz-->
+               <!--SQL Quiz-->
                <div class="col-12 col-md-6 col-lg-3 mb-4">
                   <div class="card p-0">
-                     <img src="images/js2.png" class="card-img-top" alt="">
+                     <img src="images/icons8-jquery.svg">
                      <div class="card-body">
-                        <h5 class="card-title">JS</h5>
-                        <p class="card-text"><span data-i18n="p2Quizzes"></span> JS</p>
+                        <h5 class="card-title">jQuery</h5>
+                        <p class="card-text"><span data-i18n="p2Quizzes"></span>jQuery</p>
                         <p class="card-text" data-i18n="Goodluck"><i class="fa fa-smile-o" aria-hidden="true"></i></p>
-                        <a href="quiz.html?category=js" class="btn btn-outline-danger" data-i18n="startQuiz"></a>
+                        <a href="quiz.html?category=jQuery" class="btn btn-outline-danger" data-i18n="startQuiz"></a>
                      </div>
                   </div>
                </div>
-               <!--END JS-->
-               <!--JS Quiz-->
-               <div class="col-12 col-md-6 col-lg-3 mb-4">
-                  <div class="card p-0">
-                     <img src="images/js2.png" class="card-img-top" alt="">
-                     <div class="card-body">
-                        <h5 class="card-title">JS</h5>
-                        <p class="card-text"><span data-i18n="p2Quizzes"></span> JS</p>
-                        <p class="card-text" data-i18n="Goodluck"><i class="fa fa-smile-o" aria-hidden="true"></i></p>
-                        <a href="quiz.html?category=js" class="btn btn-outline-danger" data-i18n="startQuiz"></a>
-                     </div>
-                  </div>
-               </div>
-               <!--END JS-->
-               <!--JS Quiz-->
-               <div class="col-12 col-md-6 col-lg-3 mb-4">
-                  <div class="card p-0">
-                     <img src="images/js2.png" class="card-img-top" alt="">
-                     <div class="card-body">
-                        <h5 class="card-title">JS</h5>
-                        <p class="card-text"><span data-i18n="p2Quizzes"></span> JS</p>
-                        <p class="card-text" data-i18n="Goodluck"><i class="fa fa-smile-o" aria-hidden="true"></i></p>
-                        <a href="quiz.html?category=js" class="btn btn-outline-danger" data-i18n="startQuiz"></a>
-                     </div>
-                  </div>
-               </div>
-               <!--END JS-->
+               <!--END SQL-->
             </div>
          </div>
       </div>
