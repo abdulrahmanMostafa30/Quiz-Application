@@ -1,26 +1,65 @@
 import translations from "../js/translations.js";
+var userFromLocalStorage;
+var loginDone = false
+var languageSelector = document.querySelector("select");
 
-const languageSelector = document.querySelector("select");
-languageSelector.addEventListener("change", (event) => {
-  localStorage.setItem("lang", event.target.value);
-  // location.reload();
-  setLanguage(event.target.value);
+if (languageSelector) {
+  languageSelector.addEventListener("change", (event) => {
+    localStorage.setItem("lang", event.target.value);
+    // location.reload();
+    setLanguage(event.target.value);
+  });
+}
 
-  
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const language = localStorage.getItem("lang") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
+window.addEventListener("DOMContentLoaded", function () {
+  var language = localStorage.getItem("lang") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
   document.getElementById('languageList').value = language;
   setLanguage(language);
 });
 
-const setLanguage = (language) => {
+var setLanguage = (language) => {
 
-  const elements = document.querySelectorAll("[data-i18n]");
+  var elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((element) => {
-    const translationKey = element.getAttribute("data-i18n");
+    var translationKey = element.getAttribute("data-i18n");
     element.textContent = translations[language][translationKey];
   });
   document.dir = language === "ar" ? "rtl" : "ltr";
 };
+
+Object.keys(localStorage).forEach(function (key) {
+  if (key != 'lang' || key != 'theme') {
+    try {
+      userFromLocalStorage = JSON.parse(localStorage.getItem(key));
+      if (userFromLocalStorage.login === true) {
+        // alert('logged in successfully');
+        document.getElementById('SignUpNav').style.display = 'none'
+        document.getElementById('LogInNav').setAttribute('data-i18n', 'logout')
+        document.getElementById('LogInNav').href = "#";
+        loginDone = true
+        if (window.location.pathname == '/index.html') {
+          document.getElementById('SignUpHome').setAttribute('data-i18n', 'quizes')
+          document.getElementById('SignUpHome').href = 'dashboard.html'
+        }
+        if (window.location.pathname == '/dashboard.html') {
+          document.getElementById('uName').textContent = userFromLocalStorage.name
+        }
+        return
+      }
+    }
+    catch {
+    }
+  }
+});
+if (!loginDone) {
+  if (window.location.pathname == '/dashboard.html') {
+    document.getElementById('uName').setAttribute('data-i18n', 'anonymous')
+  }
+}
+
+
+$(window).on('load', function () {
+  $(".se-pre-con").fadeOut(500);;
+
+});

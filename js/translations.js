@@ -1,4 +1,4 @@
-const translations = {
+var translations = {
   en: {
     english: "English",
     arabic: "Arabic",
@@ -8,7 +8,9 @@ const translations = {
     about: 'About',
     quizes: 'Quizes',
     login : 'LogIn',
+    logout: 'LogOut',
     signup : 'SignUp',
+    anonymous: 'Anonymous',
     h1Home: 'Find The Best Quizzes!',
     p1Home: 'Hey! would you link to grow up your skill and if you are interested to do just start here.',
     hello : 'Hello',
@@ -42,7 +44,9 @@ const translations = {
     about: 'حول',
     quizes: 'الإختبارات',
     login : 'تسجيل الدخول',
+    logout: 'تسجيل الخروج',
     signup : 'انشاء حساب',
+    anonymous: 'مجهول',
     h1Home: 'اعثر على أفضل الاختبارات!',
     p1Home: 'يا! هل يمكنك الارتباط لتنمية مهاراتك وإذا كنت مهتمًا بذلك يجب أن تبدأ هنا.',
     hello : 'مرحبا',
@@ -65,7 +69,7 @@ const translations = {
     LamiaaSelim: 'لمياء سليم',
     KholoudMohamed: 'خلود محمد',
     TareqSafwat: 'طارق صفوت',
-    AbdulrahmanMostafa: 'عبدالرحمن مصطفي'
+    AbdulrahmanMostafa: 'عبدالرحمن مصطفى'
 
 
   },
