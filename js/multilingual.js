@@ -54,7 +54,7 @@ Object.keys(localStorage).forEach(function (key) {
 });
 if (!loginDone) {
   try {
-    if (window.location.pathname.indexOf('dashboard.html') {
+    if (window.location.pathname.indexOf('dashboard.html')) {
       document.getElementById('uName').setAttribute('data-i18n', 'anonymous')
     }
   }
