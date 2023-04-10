@@ -6,7 +6,7 @@ function validateEmail(email) {
 }
 
 function validateFullname(fullName) {
-    var re = /^[A-Z][a-z]*(([,.] |[ '-])[A-Za-z][a-z]*)*(\.?)$/g;
+    var re = /^[^\s]+( [^\s]+)+$/;
     return re.test(fullName);
 }
 
