@@ -38,11 +38,11 @@ Object.keys(localStorage).forEach(function (key) {
         document.getElementById('LogInNav').setAttribute('data-i18n', 'logout')
         document.getElementById('LogInNav').href = "#";
         loginDone = true
-        if (window.location.pathname.includes('index.html')) {
+        if (window.location.pathname.indexOf('index.html')) {
           document.getElementById('SignUpHome').setAttribute('data-i18n', 'quizes')
           document.getElementById('SignUpHome').href = 'dashboard.html'
         }
-        if (window.location.pathname.includes('dashboard.html')) {
+        if (window.location.pathname.indexOf('dashboard.html')) {
           document.getElementById('uName').textContent = userFromLocalStorage.name
         }
         return
@@ -54,7 +54,7 @@ Object.keys(localStorage).forEach(function (key) {
 });
 if (!loginDone) {
   try {
-    if (window.location.pathname == '/dashboard.html') {
+    if (window.location.pathname.indexOf('dashboard.html') {
       document.getElementById('uName').setAttribute('data-i18n', 'anonymous')
     }
   }
